@@ -1,0 +1,26 @@
+{
+  "name": "codigaco/testing-package",
+  "description": "",
+  "autoload": {
+    "psr-4": {
+      "Codigaco\\Testing\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Codigaco\\Testing\\Tests\\": "tests/src",
+      "Codigaco\\Testing\\Example\\": "example",
+      "Codigaco\\Testing\\Tests\\Example\\": "tests/example"
+    }
+  },
+  "require": {
+    "ext-json": "*",
+    "php": ">=8.1",
+    "phpunit/phpunit": "^11.3",
+    "fakerphp/faker": "^1.23",
+    "dg/bypass-finals": "^1.8"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  }
+}

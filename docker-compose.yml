@@ -1,0 +1,20 @@
+services:
+  php:
+    extends:
+      file: iac/docker/php/compose.yaml
+      service: dev-mode
+    volumes:
+      - ./config/:/app/config
+      - ./example/:/app/example
+      - ./src/:/app/src
+      - ./tests/:/app/tests
+      - ./vendor/:/app/vendor
+      - ./phpunit.xml.dist:/app/phpunit.xml.dist
+
+  composer:
+    extends:
+      service: php
+    entrypoint: /usr/bin/composer
+    command: help
+    volumes:
+      - ./:/app

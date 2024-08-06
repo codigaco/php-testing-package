@@ -1,0 +1,7 @@
+services:
+  php:
+    environment:
+      XDEBUG_MODE: 'debug'
+      PHP_IDE_CONFIG: 'serverName=docker'
+    volumes:
+      - ./iac/docker/php/xdebug/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini

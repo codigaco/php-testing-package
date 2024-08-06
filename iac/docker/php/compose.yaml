@@ -1,0 +1,23 @@
+x-version: &version ${VERSION:-unknown}
+x-base-build: &base-build
+  context: ./../../..
+  dockerfile: iac/docker/php/Dockerfile
+  args:
+    VERSION: *version
+
+services:
+  normal:
+    image: sesame/php-testing-package:${VERSION:-unknown}-fpm
+    build:
+      <<: *base-build
+      args:
+        VERSION: *version
+        DEV_MODE: "0"
+
+  dev-mode:
+    image: sesame/php-testing-package:${VERSION:-unknown}-dev-fpm
+    build:
+      <<: *base-build
+      args:
+        VERSION: *version
+        DEV_MODE: "1"
