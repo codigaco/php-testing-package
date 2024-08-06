@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Codigaco\Testing\Tests\Example\Entity;
 
+use Codigaco\Testing\Tests\Example\Entity\Mother\PostEntityMother;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 

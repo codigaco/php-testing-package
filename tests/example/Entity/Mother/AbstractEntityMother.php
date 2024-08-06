@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Codigaco\Testing\Tests\Example\Entity;
+namespace Codigaco\Testing\Tests\Example\Entity\Mother;
 
 use Codigaco\Testing\Mother;
 
